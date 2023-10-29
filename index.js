@@ -6,7 +6,9 @@ const cors = require("cors");
 const helmet = require("helmet");
 const compression = require("compression");
 
-app.use(cors());
+app.use(cors({
+  origin:process.env.ORIGIN
+}));
 app.use(helmet());
 app.use(express.json());
 app.use(compression());
