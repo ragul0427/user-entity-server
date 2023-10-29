@@ -7,7 +7,8 @@ const helmet = require("helmet");
 const compression = require("compression");
 
 app.use(cors({
-  origin:process.env.ORIGIN
+  origin:process.env.ORIGIN,
+  credentials:true,
 }));
 app.use(helmet());
 app.use(express.json());
