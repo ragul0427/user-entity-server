@@ -1,8 +1,8 @@
 const knex = require("../db");
-const moment=require("moment")
+
 
 const createUser = async (req, res) => {
-  
+  console.log(req.body,"Wejb")
   knex("users")
     .insert({
       firstName: req.body.firstName,
